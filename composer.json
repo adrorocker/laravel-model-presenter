@@ -1,0 +1,41 @@
+{
+    "name": "adrosoftware/laravel-model-presenter",
+    "authors": [
+        {
+            "name": "Adro Morelos",
+            "email": "me@adro.rocks"
+        }
+    ],
+    "require": {
+      "php": "^8.4"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.25",
+        "orchestra/testbench": "^10.6",
+        "pestphp/pest": "^4.1"
+    },
+    "autoload": {
+      "psr-4": {
+        "AdroSoftware\\LaravelModelPresenter\\": "src/"
+      }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AdroSoftware\\LaravelModelPresenter\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:watch": "pest --watch",
+        "lint": "pint --test --preset=per",
+        "lint:fix": "pint --preset=per"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+       "sort-packages": true
+    }
+}
