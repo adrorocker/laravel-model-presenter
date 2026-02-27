@@ -10,9 +10,11 @@
       "php": "^8.4"
     },
     "require-dev": {
+        "larastan/larastan": "^3.9",
         "laravel/pint": "^1.25",
         "orchestra/testbench": "^10.6",
-        "pestphp/pest": "^4.1"
+        "pestphp/pest": "^4.1",
+        "phpstan/phpstan": "^2.1"
     },
     "autoload": {
       "psr-4": {
@@ -28,7 +30,8 @@
         "test": "pest",
         "test:watch": "pest --watch",
         "lint": "pint --test --preset=per",
-        "lint:fix": "pint --preset=per"
+        "lint:fix": "pint --preset=per",
+        "analyse": "phpstan analyse"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
