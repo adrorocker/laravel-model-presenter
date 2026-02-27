@@ -3,6 +3,7 @@
 namespace AdroSoftware\LaravelModelPresenter\Presenter\Model;
 
 use Carbon\Carbon;
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use AdroSoftware\LaravelModelPresenter\Presenter\JsonableTrait;
 
@@ -19,17 +20,20 @@ abstract class ModelPresenter implements ModelPresenterInterface
         return $this->model;
     }
 
-    public function __get($name): mixed
+    public function __get(string $name): mixed
     {
         return $this->model->$name;
     }
 
-    public function __set($name, $value): void
+    public function __set(string $name, mixed $value): void
     {
         $this->model->$name = $value;
     }
 
-    public function __call($name, $arguments): mixed
+    /**
+     * @param array<int, mixed> $arguments
+     */
+    public function __call(string $name, array $arguments): mixed
     {
         if (method_exists($this->model, $name)) {
             return $this->model->$name(...$arguments);
@@ -38,12 +42,12 @@ abstract class ModelPresenter implements ModelPresenterInterface
         return $this->model->$name;
     }
 
-    public function __isset($name): bool
+    public function __isset(string $name): bool
     {
         return isset($this->model->$name);
     }
 
-    protected function carbon($date)
+    protected function carbon(string|DateTimeInterface|null $date): Carbon
     {
         return new Carbon($date);
     }
@@ -68,7 +72,10 @@ abstract class ModelPresenter implements ModelPresenterInterface
         unset($this->model->$offset);
     }
 
-    public function toArray()
+    /**
+     * @return array<string, mixed>
+     */
+    public function toArray(): array
     {
         return $this->model->toArray();
     }
