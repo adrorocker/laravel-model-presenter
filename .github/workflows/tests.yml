@@ -81,7 +81,7 @@ jobs:
         run: composer update --prefer-dist --no-interaction --no-progress
 
       - name: Run Pint
-        run: vendor/bin/pint --test
+        run: composer lint
 
   analyse:
     runs-on: ubuntu-latest
