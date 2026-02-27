@@ -8,6 +8,8 @@ trait JsonableTrait
 {
     /**
      * Convert the object into something JSON serializable.
+     *
+     * @return array<string, mixed>
      */
     public function jsonSerialize(): array
     {
@@ -17,11 +19,12 @@ trait JsonableTrait
     /**
      * Convert the object to its JSON representation.
      *
-     * @param  int  $options
-     * @return string
+     * @param mixed $options
      */
     public function toJson($options = 0): string
     {
-        return Json::encode($this->jsonSerialize(), $options);
+        $opts = is_int($options) ? $options : 0;
+
+        return Json::encode($this->jsonSerialize(), $opts);
     }
 }
