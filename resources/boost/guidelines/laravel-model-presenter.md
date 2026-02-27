@@ -4,7 +4,7 @@
 
 `adrosoftware/laravel-model-presenter` implements the Presenter pattern for Laravel Eloquent models. It separates presentation/display logic from models, keeping them clean while providing formatted output for views and APIs.
 
-**Requirements:** PHP 8.4+, Laravel 11-12
+**Requirements:** PHP 8.2+, Laravel 11-12
 
 ## Core Components
 
