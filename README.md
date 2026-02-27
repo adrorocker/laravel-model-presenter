@@ -14,13 +14,15 @@ composer require adrosoftware/laravel-model-presenter
 
 ## Requirements
 
-- PHP 8.4+
+- PHP 8.2+
 - Laravel 11 or 12
 
 ### Version Compatibility
 
 | PHP | Laravel 11 | Laravel 12 |
 |-----|------------|------------|
+| 8.2 | ✅         | ✅         |
+| 8.3 | ✅         | ✅         |
 | 8.4 | ✅         | ✅         |
 | 8.5 | ✅         | ✅         |
 
