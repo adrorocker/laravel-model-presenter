@@ -12,6 +12,8 @@ The Presenter pattern helps keep your models clean by extracting presentation an
 composer require adrosoftware/laravel-model-presenter
 ```
 
+Since version 1.2.0, the package is auto-discovered by Laravel, so no manual service provider registration is required.
+
 ## Requirements
 
 - PHP 8.2+
