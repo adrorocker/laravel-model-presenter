@@ -7,6 +7,4 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
 
-interface PresenterInterface extends ArrayAccess, Arrayable, JsonSerializable, Jsonable
-{
-}
+interface PresenterInterface extends ArrayAccess, Arrayable, JsonSerializable, Jsonable {}

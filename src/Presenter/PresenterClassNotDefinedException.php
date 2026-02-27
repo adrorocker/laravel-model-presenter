@@ -4,6 +4,4 @@ namespace AdroSoftware\LaravelModelPresenter\Presenter;
 
 use Exception;
 
-class PresenterClassNotDefinedException extends Exception
-{
-}
+class PresenterClassNotDefinedException extends Exception {}

@@ -12,8 +12,7 @@ abstract class ModelPresenter implements ModelPresenterInterface
 
     public function __construct(
         protected Model $model,
-    ) {
-    }
+    ) {}
 
     public function getModel(): Model
     {
@@ -32,12 +31,16 @@ abstract class ModelPresenter implements ModelPresenterInterface
 
     public function __call($name, $arguments): mixed
     {
-        return $this->model->$name ?? $this->model->$name(...$arguments);
+        if (method_exists($this->model, $name)) {
+            return $this->model->$name(...$arguments);
+        }
+
+        return $this->model->$name;
     }
 
-    public function __isset($name)
+    public function __isset($name): bool
     {
-        return property_exists($this->model, $name);
+        return isset($this->model->$name);
     }
 
     protected function carbon($date)
