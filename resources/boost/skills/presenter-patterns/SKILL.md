@@ -1,5 +1,5 @@
 ---
-name: Presenter Patterns
+name: presenter-patterns
 description: Advanced patterns and best practices for Laravel Model Presenter including inheritance, API resources, testing, and real-world examples.
 ---
 
