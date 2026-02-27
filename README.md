@@ -86,6 +86,10 @@ echo $user->present()->formattedCreatedAt();
 echo $user->present()->email;
 ```
 
+## AI-Assisted Development
+
+This package includes [Laravel Boost](https://github.com/laravel/boost) guidelines for AI coding assistants. After installing, run `php artisan boost:install` to enable intelligent code suggestions.
+
 ## Documentation
 
 For detailed documentation, see the [docs](docs/) directory:
