@@ -14,8 +14,8 @@ composer require adrosoftware/laravel-model-presenter
 
 ## Requirements
 
-- PHP 8.4+
-- Laravel 10+
+- PHP 8.1+
+- Laravel 10, 11, or 12
 
 ## Quick Start
 
